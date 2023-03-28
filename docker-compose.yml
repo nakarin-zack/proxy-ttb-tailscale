@@ -4,6 +4,7 @@ services:
     image: 'nginx'
     restart: unless-stopped
     ports:
+      - '80:80'
       - '7990:7990'
       - '8081:8081'
       - '8443:8443'
@@ -16,6 +17,8 @@ services:
       - '28000:28000'
       - '15590:15590'
       - '9080:9080'
+      - '6379:6379'
+      - '2223:2223'
       - '443:443'
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
