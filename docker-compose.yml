@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     ports:
       - '80:80'
+      - '81:81'
       - '7990:7990'
       - '8081:8081'
       - '8443:8443'
