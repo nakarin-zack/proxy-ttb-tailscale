@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    image: 'nginx'
+    restart: unless-stopped
+    ports:
+      - '7990:7990'
+      - '8081:8081'
+      - '8443:8443'
+      - '8070:8070'
+      - '5601:5601'
+      - '51003:51003'
+      - '1522:1522'
+      - '27017:27017'
+      - '9000:9000'
+      - '28000:28000'
+      - '443:443'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl/:/etc/ssl/certificates/:ro
