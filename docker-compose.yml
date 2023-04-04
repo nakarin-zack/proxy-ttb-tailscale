@@ -21,6 +21,9 @@ services:
       - '6379:6379'
       - '2223:2223'
       - '443:443'
+      - '3389:3389'
+      - '3390:3390'
+      - '3391:3391'
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx:/etc/nginx:ro
       - ./ssl/:/etc/ssl/certificates/:ro
